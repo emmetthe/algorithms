@@ -9,11 +9,7 @@ var combinationSum4 = function (nums, target) {
         sum += arr[i - nums[j]];
       }
     }
-
     arr[i] = sum;
   }
-
   return arr[arr.length - 1];
 };
-
-console.log(combinationSum4([2, 3, 5], 10))
