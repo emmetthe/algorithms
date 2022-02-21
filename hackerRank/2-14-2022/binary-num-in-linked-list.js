@@ -1,10 +1,10 @@
 function getNumber(binary) {
   // Write your code here
-  let str = '';
-  let curr = binary;
-  while (curr) {
-    str += curr.data;
-    curr = curr.next;
+  let total = 0n;
+  while (binary) {
+    total *= 2n;
+    total += BigInt(binary.data);
+    binary = binary.data;
   }
-  return parseInt(str, 2);
+  return total;
 }
